@@ -5,20 +5,17 @@ import MoonLoader from "react-spinners/MoonLoader";
 import { useSelector } from 'react-redux';
 import useApiCall from '../../hooks/useApiCall';
 
-import { fetchPostsStart } from "../../redux/posts/actions";
-import {
-  selectIsPostFetching,
-  selectPostsItems,
-} from "../../redux/posts/selectors";
-
 const Posts = () => {
-  const { posts, isLoading } = useSelector(state => state.posts);
+  const state = useSelector(state => state);
+  console.log('State => ', state); 
   const callApi = useApiCall();
+  const isFetching = false;
+  const posts = [];
   // console.log(posts);
   // ─── SIDEEFFECTS ────────────────────────────────────────────────────────────────
   useEffect(() => {
     callApi('post', 'get');
-  }, [fetchPostsStart]);
+  }, []);
 
   // ─── VIEW ───────────────────────────────────────────────────────────────────────
   return (
@@ -33,7 +30,7 @@ const Posts = () => {
         <nav className="sidebar"></nav>
         <main className="view">
           <div className="detail">
-            {isLoading && <MoonLoader />}
+            {isFetching && <MoonLoader />}
             <ul>
               {posts.map((post) => {
                 return <li key={post.id}>{post.title}</li>;

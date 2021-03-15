@@ -6,7 +6,7 @@ const initialState = {
   errorMessage: undefined,
 };
 
-const postsReducer = (state = initialState, action) => {
+const asyncReducer = (state = initialState, action) => {
   switch (action.type) {
     case PostsTypes.FETCH_POSTS_START:
       return {
@@ -18,7 +18,7 @@ const postsReducer = (state = initialState, action) => {
       return {
         ...state,
         isFetching: false,
-        posts: action.payload,
+        list: action.payload,
       };
 
     case PostsTypes.FETCH_POSTS_FAILURE:
@@ -33,4 +33,4 @@ const postsReducer = (state = initialState, action) => {
   }
 };
 
-export default postsReducer;
+export default asyncReducer;

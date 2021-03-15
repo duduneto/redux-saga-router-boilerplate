@@ -1,6 +1,6 @@
 import { takeLatest, call, put, all } from "redux-saga/effects";
 
-import * as services from "../../utils/services";
+import * as services from "../utils/services";
 import { fetchPostsSuccess, fetchPostsFailure } from "./actions";
 import PostsTypes from "./types";
 
@@ -20,3 +20,4 @@ export function* fetchPostsStart() {
 export function* postsSagas() {
   yield all([call(fetchPostsStart)]);
 }
+  
