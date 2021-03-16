@@ -1,0 +1,14 @@
+.btn-primus {
+    background-color: var(--color_tertius);
+    height: 3.5rem;
+    min-width: 100px;
+    border: none;
+    border-radius: 20px;
+    color: var(--color_primus_dark_2);
+    font-weight: bold;
+    outline: transparent;
+
+    &:active {
+        background-color: var(--color-grey-dark-3);
+    }
+}

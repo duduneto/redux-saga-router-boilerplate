@@ -7,14 +7,14 @@ import PostsTypes from "./types";
 export function* fetchPostsAsync(action) {
   try {
     const response = yield call(services.default[action.fileName][action.functionName]);
-    yield put(fetchPostsSuccess(response.data));
+    yield put(fetchPostsSuccess(response.data, action));
   } catch (error) {
     yield put(fetchPostsFailure(error.message));
   }
 }
 
 export function* fetchPostsStart() {
-  yield takeLatest(PostsTypes.FETCH_POSTS_START, fetchPostsAsync);
+  yield takeLatest(PostsTypes.FETCH_START, fetchPostsAsync);
 }
 
 export function* postsSagas() {

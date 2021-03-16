@@ -8,20 +8,20 @@ const initialState = {
 
 const asyncReducer = (state = initialState, action) => {
   switch (action.type) {
-    case PostsTypes.FETCH_POSTS_START:
+    case PostsTypes.FETCH_START:
       return {
         ...state,
         isFetching: true,
       };
 
-    case PostsTypes.FETCH_POSTS_SUCCES:
+    case PostsTypes.FETCH_SUCCES:
       return {
         ...state,
         isFetching: false,
         list: action.payload,
       };
 
-    case PostsTypes.FETCH_POSTS_FAILURE:
+    case PostsTypes.FETCH_FAILURE:
       return {
         ...state,
         isFetching: false,

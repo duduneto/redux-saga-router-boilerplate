@@ -2,22 +2,22 @@ import PostsTypes from "./types";
 
 export const fetchPostsStart = (fileName, functionName) => {
   return {
-    type: PostsTypes.FETCH_POSTS_START,
+    type: PostsTypes.FETCH_START,
     fileName,
     functionName,
   };
 };
 
-export const fetchPostsSuccess = (posts) => {
+export const fetchPostsSuccess = (posts, action) => {
   return {
-    type: PostsTypes.FETCH_POSTS_SUCCES,
+    type: PostsTypes.FETCH_SUCCES,
     payload: posts,
   };
 };
 
 export const fetchPostsFailure = (errorMessage) => {
   return {
-    type: PostsTypes.FETCH_POSTS_FAILURE,
+    type: PostsTypes.FETCH_FAILURE,
     payload: errorMessage,
   };
 };
