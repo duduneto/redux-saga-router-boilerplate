@@ -9,6 +9,7 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 
     .credentials {
         width: 80%;
@@ -19,7 +20,7 @@
 
     .cta-login-container {
         width: 100%;
-        height: 25%;
+        height: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
