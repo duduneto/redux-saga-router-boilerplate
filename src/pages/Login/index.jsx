@@ -14,7 +14,7 @@ function Login() {
     }
 
     return (
-        <div className="all-page center-content bg-primus-color-dark-2">
+        <div className="all-page-vp center-content bg-primus-color-dark-2">
             <BgLogin />
             <div className="login-container center-content">
                 <div className="credentials">

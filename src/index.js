@@ -13,7 +13,9 @@ ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter>
+      <div style={{width: '100%', height: '100%'}}>
         <App />
+      </div>
       </BrowserRouter>
     </PersistGate>
   </Provider>,

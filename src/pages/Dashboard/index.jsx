@@ -1,36 +1,16 @@
 import React from 'react';
-import { useSyncCall } from '../../hooks';
-import { useSelector } from 'react-redux';
-import { Header } from './components';
+import { Header, Content, Drawer } from './components';
 
 function Dashboard() {
 
-  const { counter } = useSelector(state => state);
-
-  const syncCall = useSyncCall();
-
-  const handleLogout = () => {
-    syncCall(false, 'auth.logged');
-  }
-
-  const handleAdiciona = () => {
-    syncCall(counter.value + 1, 'counter.value');
-  }
-  const handleRemove = () => {
-    syncCall(counter.value - 1, 'counter.value');
-  }
-
   return (
-    <>
+    <div className="dashboard">
       <Header />
-      <h1>Dashboard</h1>
-      <button onClick={handleLogout} >Logout</button>
-      <div>
-        <h2>{`Counter ${counter.value || '0'}`}</h2>
+      <div className="under-header-container">
+        <Drawer />
+        <Content />
       </div>
-      <button onClick={handleAdiciona} >Adiciona</button>
-      <button onClick={handleRemove} >Remove</button>
-    </>
+    </div>
   );
 }
 
