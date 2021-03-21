@@ -7,12 +7,42 @@ const initialState = {
   errorMessage: undefined,
 };
 
+export const teste = (state, action) => {
+  console.log('action =>', action);
+
+  switch (action.type) {
+    case 'teste':
+      return {
+        ...state,
+        ...action.payload
+      };
+
+    default:
+      return state;
+  }
+
+};
+
 export const syncReducer = (state, action) => {
-  const newState = action.path ? {..._.set(state, action.path.split("."), action.payload)} : false;
+//   console.log('Action => ', action);
+//   switch (action.type) {
+//     case PostsTypes.SYNC_CALL:
+//       return {
+//         ...state,
+//         [action.path.split(".")[0]]: {[action.path.split(".")[1]]: action.payload}
+//       };
+
+//     default:
+//       return state;
+//   }
+  const newState = action.path ? {..._.set(state, action.path, action.payload)} : false;
+  const targetState = action.path && [action.path.split(".")[0]];
+  const targetValue = action.path && newState[targetState];
   switch (action.type) {
     case PostsTypes.SYNC_CALL:
       return newState ? {
-        ...newState,
+        ...state,
+        [targetState]: {...targetValue}
       }: {
         ...state,
         ...action.payload

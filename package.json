@@ -4,6 +4,7 @@
   "license": "MIT",
   "version": "0.1.0",
   "dependencies": {
+    "@babel/helper-validator-identifier": "^7.12.11",
     "axios": "^0.19.0",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
@@ -14,6 +15,8 @@
     "react-spinners": "^0.6.1",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-persist-transform-filter": "^0.0.20",
     "redux-saga": "^1.1.1",
     "reselect": "^4.0.0"
   },

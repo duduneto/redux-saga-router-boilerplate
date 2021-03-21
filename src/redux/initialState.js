@@ -1,12 +1,18 @@
 const state = {
+    logged: {
+        mode: true
+    },
     auth: {
-        logged: false,
+        logged :false,
     },
     home: {
         list: [],
         loading: false
     },
-    counter : 0,
+    teste_persist: [],
+    counter : {
+        value: 0
+    },
 };
 
 export default state;
