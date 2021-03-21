@@ -1,4 +1,5 @@
 import PostsTypes from "./types";
+import _ from 'lodash';
 
 const initialState = {
   isFetching: false,
@@ -6,7 +7,24 @@ const initialState = {
   errorMessage: undefined,
 };
 
-const asyncReducer = (state = initialState, action) => {
+export const syncReducer = (state, action) => {
+  const newState = action.path ? {..._.set(state, action.path.split("."), action.payload)} : false;
+  switch (action.type) {
+    case PostsTypes.SYNC_CALL:
+      return newState ? {
+        ...newState,
+      }: {
+        ...state,
+        ...action.payload
+      };
+
+    default:
+      return state;
+  }
+
+};
+
+export const asyncReducer = (state, action) => {
   switch (action.type) {
     case PostsTypes.FETCH_START:
       return {
@@ -32,5 +50,3 @@ const asyncReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default asyncReducer;

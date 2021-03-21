@@ -1,5 +1,13 @@
 import PostsTypes from "./types";
 
+export const syncCall = (payload, path) => {
+  return {
+    type: PostsTypes.SYNC_CALL,
+    payload,
+    path
+  };
+};
+
 export const fetchPostsStart = (fileName, functionName) => {
   return {
     type: PostsTypes.FETCH_START,

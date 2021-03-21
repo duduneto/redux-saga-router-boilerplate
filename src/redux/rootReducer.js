@@ -1,8 +1,8 @@
 import initialState from './initialState';
 
-import asyncReducer from "./reducer";
+import { asyncReducer, syncReducer } from "./reducer";
 
-const listReducers = [asyncReducer];
+const listReducers = [asyncReducer, syncReducer];
 
 function allReducers(state = initialState, action) {
   var evolvedState;
