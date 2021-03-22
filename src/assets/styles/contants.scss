@@ -1,4 +1,12 @@
 :root {
+
+    // feedback colors
+
+    --success: #7BBC03;
+    --warning: #F76615;
+
+    // pallete
+
     --color-primary: #313d6f;
     --color-primary-light: #ff3366;
     --color-primary-dark: #ba265d;
@@ -19,6 +27,7 @@
     --color_primus_dark_2: #0F102B;
     --color_secundus_dark_light_1: #10112e;
     --color_primus_dark_1: #23243C;
+    --color_primus_dark_1_light_1: #2e2f4e;
     --color_primus: #313d6f;
     --color_primus_ligth_1: #394477;
     --color_primus_ligth_2: #4a5588;
@@ -29,4 +38,6 @@
     --color_quartus: #B8BCC5;
     --color_quintus: #5A5B69;
     --color_sextus: #5681A0;
+
+    --dashboard_header_height: 6rem;
   }

@@ -42,3 +42,34 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.pd-1 {
+    padding: 1rem;
+}
+.pd-2 {
+    padding: 2rem;
+}
+.pd-3 {
+    padding: 3rem;
+}
+.pd-4 {
+    padding: 4rem;
+}
+
+.color-warning {
+    color: var(--warning) !important;
+}
+.color-success {
+    color: var(--success) !important;
+}
+
+.bg-color-warning {
+    background-color: var(--warning) !important;
+}
+.bg-color-success {
+    background-color: var(--success) !important;
+}

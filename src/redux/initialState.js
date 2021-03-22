@@ -2,6 +2,9 @@ const state = {
     logged: {
         mode: true
     },
+    drawer: {
+        visible: true,
+    },
     auth: {
         logged :false,
     },
