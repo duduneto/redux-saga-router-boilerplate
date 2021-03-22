@@ -23,12 +23,14 @@ function Home() {
                         </div>
                         <div className="info-content">
                             <div className="box">
-                                <div className="icon-container">
-                                    <FiShoppingCart color={"#FEB820"} />
-                                </div>
-                                <div className="info">
-                                    <span className="label">Orders</span>
-                                    <span className="value">1.584</span>
+                                <div className="left-content">
+                                    <div className="icon-container">
+                                        <FiShoppingCart color={"#FEB820"} />
+                                    </div>
+                                    <div className="info">
+                                        <span className="label">Orders</span>
+                                        <span className="value">1.584</span>
+                                    </div>
                                 </div>
                                 <div className="obs">
                                     <div className="obs-content">
@@ -38,12 +40,14 @@ function Home() {
                                 </div>
                             </div>
                             <div className="box">
-                                <div className="icon-container">
-                                    <MdAttachMoney color={"#F8802E"} />
-                                </div>
-                                <div className="info">
-                                    <span className="label">Revenue</span>
-                                    <span className="value">$17.524,25</span>
+                                <div className="left-content">
+                                    <div className="icon-container">
+                                        <MdAttachMoney color={"#F8802E"} />
+                                    </div>
+                                    <div className="info">
+                                        <span className="label">Revenue</span>
+                                        <span className="value">$17.524,25</span>
+                                    </div>
                                 </div>
                                 <div className="obs">
                                     <div className="obs-content">
@@ -53,12 +57,14 @@ function Home() {
                                 </div>
                             </div>
                             <div className="box">
-                                <div className="icon-container">
-                                    <FaRegMoneyBillAlt color={"#AAD475"} />
-                                </div>
-                                <div className="info">
-                                    <span className="label">Earnings</span>
-                                    <span className="value">$15.295,25</span>
+                                <div className="left-content">
+                                    <div className="icon-container">
+                                        <FaRegMoneyBillAlt color={"#AAD475"} />
+                                    </div>
+                                    <div className="info">
+                                        <span className="label">Earnings</span>
+                                        <span className="value">$15.295,25</span>
+                                    </div>
                                 </div>
                                 <div className="obs">
                                     <div className="obs-content color-warning">

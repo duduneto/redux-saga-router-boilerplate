@@ -20,7 +20,7 @@
             font-weight: bolder;
         }
         .value {
-            font-size: 20px;
+            font-size: 16px;
             color: var(--color_tertius);
             font-weight: lighter;
         }
@@ -36,12 +36,17 @@
         width: 100%;
         height: 100px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         background-color: var(--color_primus_dark_1_light_1);
         border-radius: 10px;
         margin-bottom: 2rem;
         padding: 2rem;
+
+        .left-content {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
 
         .icon-container {
             height: 50px;
@@ -52,6 +57,7 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
+            margin-right: 1rem;
         }
     
         .info {
@@ -63,14 +69,14 @@
             }
             
             .value {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: bold;
             }
         }
 
         .obs {
             height: 70%;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bolder;
             display: flex;
             align-items: flex-end;
